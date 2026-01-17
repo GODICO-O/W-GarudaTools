@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.21)
+
+# Platform target (sementara: linux untuk test CI)
+set(GEODE_TARGET_PLATFORM linux)
+
 project(WGarudaTools)
 
 set(CMAKE_CXX_STANDARD 20)

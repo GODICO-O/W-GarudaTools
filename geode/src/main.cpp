@@ -31,7 +31,7 @@ public:
     }
 };
 
+// Event Geode: dipanggil saat mod selesai dimuat
 $on_mod(Loaded) {
-    // Untuk test awal: popup langsung muncul saat game dibuka
     WGarudaPopup::open();
 }

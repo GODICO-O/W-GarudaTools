@@ -1,0 +1,9 @@
+{
+  "id": "w.garuda.tools",
+  "name": "W-Garuda Tools",
+  "developer": "Garuda",
+  "description": "Terminal style tools for Geometry Dash",
+  "version": "1.0.0",
+  "geode": ">=2.0.0",
+  "entry": "main.cpp"
+}

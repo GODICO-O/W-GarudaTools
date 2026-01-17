@@ -21,10 +21,8 @@ jobs:
     - name: Configure project
       run: |
         mkdir build
-        cd build
-        cmake ..
+        cmake -S geode -B build
 
     - name: Build project
       run: |
-        cd build
-        cmake --build .
+        cmake --build build

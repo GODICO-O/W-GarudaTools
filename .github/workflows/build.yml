@@ -10,21 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-  uses: actions/checkout@v4
-  with:
-    submodules: recursive
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
-    - name: Install dependencies
-      run: |
-        sudo apt update
-        sudo apt install -y cmake g++ ninja-build git
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y cmake g++ ninja-build git
 
-    - name: Configure project
-      run: |
-        mkdir build
-        cmake -S geode -B build
+      - name: Configure project
+        run: |
+          mkdir build
+          cmake -S geode -B build
 
-    - name: Build project
-      run: |
-        cmake --build build
+      - name: Build project
+        run: |
+          cmake --build build

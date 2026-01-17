@@ -1,8 +1,16 @@
 cmake_minimum_required(VERSION 3.21)
 project(WGarudaTools)
 
-add_library(${PROJECT_NAME} SHARED
+# Lokasi Geode SDK
+set(GEODE_SDK ${CMAKE_SOURCE_DIR}/../geode-sdk)
+
+# Load Geode CMake
+include(${GEODE_SDK}/cmake/Geode.cmake)
+
+# Buat library mod
+add_library(WGarudaTools SHARED
     src/main.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} geode)
+# Setup sebagai mod Geode
+geode_setup(WGarudaTools)

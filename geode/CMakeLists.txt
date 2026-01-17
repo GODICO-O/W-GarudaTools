@@ -16,10 +16,5 @@ add_library(WGarudaTools SHARED
     src/main.cpp
 )
 
-# Link ke target Geode utama
-target_link_libraries(WGarudaTools PRIVATE geode)
-
-# Include header Geode
-target_include_directories(WGarudaTools PRIVATE
-    ${CMAKE_SOURCE_DIR}/../geode-sdk
-)
+# Link ke Geode sebagai mod
+target_link_libraries(WGarudaTools PRIVATE geode::mod)
